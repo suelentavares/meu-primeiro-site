@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Norte - Pizzaria Regional</title>
+    
+    <!-- VÍNCULO COM O ARQUIVO CSS LOCAL -->
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- ÍCONES DAS REDES SOCIAIS (FontAwesome para o footer funcionar) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="brand">
+                <img src="imagens/logo.png" alt="Logo Raízes do Norte" class="logo">
+                <div class="brand-text">
+                    <h1>Raízes do Norte</h1>
+                    <span>Pizzaria Regional</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="active">Home</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#reservas">Reservas</a>
+                <a href="#pedidos">Pedidos Online</a>
+                <a href="#entregas">Entregas</a>
+                <a href="#pagamentos">Pagamentos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-banner">
+            <div class="hero-text">
+                <h2>Peça sua pizza pelo App<br>ou pelo site</h2>
+                <p>CONHEÇA NOSSOS PRODUTOS</p>
+                <div class="badge-toten">Sistema de Autoatendimento</div>
+            </div>
+            <img src="imagens/images.png" alt="Foto de uma fatia de pizza saborosa" class="imagem-pizza">
+        </section>
+
+        <h2 class="section-title">Nossos Serviços</h2>
+        <section class="important-pillars">
+            <div class="pillar-card"><span>🛵</span>Delivery</div>
+            <div class="pillar-card"><span>📱</span>QR Code</div>
+            <div class="pillar-card"><span>🪑</span>Reservas Online</div>
+            <div class="pillar-card"><span>📍</span>Rastreamento</div>
+            <div class="pillar-card"><span>💳</span>Pagamento Digital</div>
+        </section>
+
+        <section id="cardapio">
+            <h2 class="section-title">Cardápio</h2>
+            <div class="grid-products">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-emoji">🍕</div>
+                    <h4>Pizza de Frango com Catupiri</h4>
+                    <select id="size-frango">
+                        <option value="35">Pequena - R$ 35,00</option>
+                        <option value="50" selected>Média - R$ 50,00</option>
+                        <option value="65">Grande - R$ 65,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Frango com Catupiri', 'size-frango')">Escolher</button>
+                </div>
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-emoji">🍌</div>
+                    <h4>Pizza Banana Pacovan Frita</h4>
+                    <select id="size-banana">
+                        <option value="38">Pequena - R$ 38,00</option>
+                        <option value="52" selected>Média - R$ 52,00</option>
+                        <option value="68">Grande - R$ 68,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Banana Pacovan Frita', 'size-banana')">Escolher</button>
+                </div>
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-emoji">🌰</div>
+                    <h4>Trufa Doce c/ Castanha</h4>
+                    <select id="size-castanha">
+                        <option value="5">Pequena - R$ 5,00</option>
+                        <option value="8" selected>Média - R$ 8,00</option>
+                        <option value="10">Grande - R$ 10,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Doce de Leite c/ Castanha', 'size-castanha')">Escolher</button>
+                </div>
+                <!-- Produto 4 -->
+                <div class="product-card">
+                    <div class="product-emoji">🐟</div>
+                    <h4>Pizza de Pirarucu</h4>
+                    <select id="size-pirarucu">
+                        <option value="45">Pequena - R$ 45,00</option>
+                        <option value="60" selected>Média - R$ 60,00</option>
+                        <option value="78">Grande - R$ 78,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Filé de Pirarucu', 'size-pirarucu')">Escolher</button>
+                </div>
+                <!-- Produto 5 -->
+                <div class="product-card">
+                    <div class="product-emoji">🍲</div>
+                    <h4>Tacacá Especial</h4>
+                    <select id="size-tacaca">
+                        <option value="45">Pequena - R$ 45,00</option>
+                        <option value="55" selected>Média - R$ 55,00</option>
+                        <option value="75">Grande - R$ 75,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Tacacá Especial', 'size-tacaca')">Escolher</button>
+                </div>
+                <!-- Produto 6 -->
+                <div class="product-card">
+                    <div class="product-emoji">🍨</div>
+                    <h4>Sorvete de Açaí</h4>
+                    <select id="size-Açaí">
+                        <option value="20">Pequena - R$ 20,00</option>
+                        <option value="25" selected>Média - R$ 25,00</option>
+                        <option value="30">Grande - R$ 30,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Açaí com Charque', 'size-Açaí')">Escolher</button>
+                </div>
+                <!-- Produto 7 -->
+                <div class="product-card">
+                    <div class="product-emoji">🧀</div>
+                    <h4>Pizza Caboquinho (Tucumã)</h4>
+                    <select id="sizeCaboquinho">
+                        <option value="40">Pequena - R$ 40,00</option>
+                        <option value="52" selected>Média - R$ 52,00</option>
+                        <option value="68">Grande - R$ 68,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Caboquinho com Tucumã', 'sizeCaboquinho')">Escolher</button>
+                </div>
+                <!-- Produto 8 -->
+                <div class="product-card">
+                    <div class="product-emoji">🥥</div>
+                    <h4>Pudim Cupuaçu c/ Castanha</h4>
+                    <select id="size-cupuaçu">
+                        <option value="40">Pequena - R$ 40,00</option>
+                        <option value="52" selected>Média - R$ 52,00</option>
+                        <option value="68">Grande - R$ 68,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Castanha com Cupuaçu', 'size-cupuaçu')">Escolher</button>
+                </div>
+                <!-- Produto 9 -->
+                <div class="product-card">
+                    <div class="product-emoji">🐟</div>
+                    <h4>Pizza Tambaqui com Jambú</h4>
+                    <select id="size-Tambaqui">
+                        <option value="55">Pequena - R$ 55,00</option>
+                        <option value="62" selected>Média - R$ 62,00</option>
+                        <option value="78">Grande - R$ 78,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Tambaqui com Jambú', 'size-Tambaqui')">Escolher</button>
+                </div>
+                <!-- Produto 10 -->
+                <div class="product-card">
+                    <div class="product-emoji">🥩</div>
+                    <h4>Pizza Carne de Sol</h4>
+                    <select id="size-Carne">
+                        <option value="45">Pequena - R$ 45,00</option>
+                        <option value="62" selected>Média - R$ 62,00</option>
+                        <option value="78">Grande - R$ 78,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Carne de Sol c/ Macaxeira', 'size-Carne')">Escolher</button>
+                </div>
+                <!-- Produto 11 -->
+                <div class="product-card">
+                    <div class="product-emoji">🦈</div>
+                    <h4>Pizza Pirarucu à Casaca</h4>
+                    <select id="size-Pirarucu">
+                        <option value="45">Pequena - R$ 45,00</option>
+                        <option value="62" selected>Média - R$ 62,00</option>
+                        <option value="80">Grande - R$ 80,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Pirarucu à Casaca', 'size-Pirarucu')">Escolher</button>
+                </div>
+                <!-- Produto 12 -->
+                <div class="product-card">
+                    <div class="product-emoji">🍋</div>
+                    <h4>Mousse de Taperebá Nevado</h4>
+                    <select id="Taperebá-Nevado">
+                        <option value="40">Pequena - R$ 40,00</option>
+                        <option value="60" selected>Média - R$ 52,00</option>
+                        <option value="78">Grande - R$ 68,00</option>
+                    </select>
+                    <button class="btn-order" onclick="adicionarAoCarrinho('Taperebá Nevado', 'Taperebá-Nevado')">Escolher</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-row">
+            <section id="reservas" class="panel-box">
+                <h3>🪑 Reservas de Mesas</h3>
+                <form onsubmit="realizarReserva(event)">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" id="res-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone de Contato</label>
+                        <input type="tel" id="res-fone" placeholder="(92) 99999-9999" required>
+                    </div>
+                    <div style="display:flex; gap:10px;">
+                        <div class="form-group" style="flex:1;">
+                            <label>Data da Reserva</label>
+                            <input type="date" id="res-data" required>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label>Hora</label>
+                            <input type="time" id="res-hora" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Selecione o Número da Mesa (Clique no mapa abaixo)</label>
+                        <input type="text" id="res-mesa" readonly placeholder="Nenhuma selecionada" style="background:#eee;" required>
+                        <div class="tables-map">
+                            <div class="table-node" onclick="selecionarMesaNode(1, this)">M01</div>
+                            <div class="table-node" onclick="selecionarMesaNode(2, this)">M02</div>
+                            <div class="table-node" onclick="selecionarMesaNode(3, this)">M03</div>
+                            <div class="table-node" onclick="selecionarMesaNode(4, this)">M04</div>
+                            <div class="table-node" onclick="selecionarMesaNode(5, this)">M05</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Observação</label>
+                        <textarea id="res-obs" rows="2" placeholder="Ex: Cadeira de bebê..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-order" style="background-color:var(--marrom-escuro);">Confirmar Alocação de Mesa</button>
+                </form>
+            </section>
+
+            <section id="pedidos" class="panel-box">
+                <h3>🛒 Painel do Pedido Online</h3>
+                <div class="form-group">
+                    <label>Identificação do Cliente</label>
+                    <input type="text" id="ped-cliente" value="Cliente Balcão/Toten" required>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <div class="form-group" style="flex:1;">
+                        <label>Tipo do Pedido</label>
+                        <select id="ped-tipo">
+                            <option value="Presencial">Presencial (Mesa/Toten)</option>
+                            <option value="Delivery">Delivery (Entrega)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>Origem</label>
+                        <input type="text" id="ped-origem" value="Toten Salão" readonly style="background:#eee;">
+                    </div>
+                </div>
+
+                <div style="margin-top:15px; font-weight:700; font-size:14px;">Bebidas Adicionais:</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:15px;">
+                    <button type="button" class="btn-drink" onclick="adicionarBebida('Refrigerante Baré', 8)">+ Baré (R$ 8)</button>
+                    <button type="button" class="btn-drink" onclick="adicionarBebida('Guaraná Tauá', 8)">+ Tauá (R$ 8)</button>
+                    <button type="button" class="btn-drink" onclick="adicionarBebida('Guaraná Tuchaua', 9)">+ Tuchaua (R$ 9)</button>
+                    <button type="button" class="btn-drink" onclick="adicionarBebida('Regente', 7)">+ Regente (R$ 7)</button>
+                    <button type="button" class="btn-drink" onclick="adicionarBebida('Coca/Fanta', 9)">+ Coca/Fanta (R$ 9)</button>
+                </div>
+
+                <div style="font-weight:700; font-size:14px; margin-top:10px;">Itens Selecionados:</div>
+                <ul class="cart-list" id="itens-carrinho">
+                    <li style="color:#aaa; font-size:12px;" id="carrinho-vazio">Nenhum item selecionado ainda...</li>
+                </ul>
+
+                <div style="display:flex; justify-content:space-between; font-weight:700; margin-top:15px; border-top:2px solid var(--marrom-claro); padding-top:10px;">
+                    <span>VALOR TOTAL:</span>
+                    <span id="valor-total-exibido">R$ 0,00</span>
+                </div>
+                <button class="btn-order" style="margin-top:15px;" onclick="enviarPedidoParaProducao()">Enviar para Cozinha</button>
+            </section>
+        </div>
+
+        <div class="flex-row">
+            <section id="entregas" class="panel-box">
+                <h3>📍 Status da Entrega (Painel Cliente)</h3>
+                <div class="status-tracker">
+                    <div class="step active" id="st-1">1<span class="step-label">Recebido</span></div>
+                    <div class="step" id="st-2">2<span class="step-label">Em Preparo</span></div>
+                    <div class="step" id="st-3">3<span class="step-label">No Forno</span></div>
+                    <div class="step" id="st-4">4<span class="step-label">Saiu p/ Entrega</span></div>
+                    <div class="step" id="st-5">5<span class="step-label">Entregue</span></div>
+                </div>
+
+                <div style="margin-top:45px; background:var(--fundo-suave); padding:15px; border-radius:8px; font-size:13px;">
+                    <div style="margin-bottom:6px;"><strong>Número do Pedido:</strong> <span id="track-num">#0000</span></div>
+                    <div style="margin-bottom:6px;"><strong>Endereço de Destino:</strong> <span id="track-end">Mesa / Salão Local</span></div>
+                    <div style="margin-bottom:6px;"><strong>Tempo Estimado:</strong> <span id="track-tempo">-- min</span></div>
+                    <div><strong>Operador Express/Entregador:</strong> <span id="track-moto">Logística Interna</span></div>
+                </div>
+                <button class="btn-order" style="margin-top:15px; background-color:var(--marrom-medio);" onclick="simularAvancoStatus()">Simular Próximo Passo do Fluxo</button>
+            </section>
+
+            <section id="pagamentos" class="panel-box">
+                <h3>💳 Pagamentos Digitais</h3>
+                <p style="font-size:13px; color:#666;">Escolha a sua forma de pagamento preferida para liquidação no terminal:</p>
+                <div class="payment-methods">
+                    <div class="pay-btn" id="p-pix" onclick="selecionarFormaPagamento('Pix', 'p-pix')">Pix</div>
+                    <div class="pay-btn" id="p-cc" onclick="selecionarFormaPagamento('Cartão Crédito', 'p-cc')">C. Crédito</div>
+                    <div class="pay-btn" id="p-cd" onclick="selecionarFormaPagamento('Cartão Débito', 'p-cd')">C. Débito</div>
+                    <div class="pay-btn" id="p-din" onclick="selecionarFormaPagamento('Dinheiro', 'p-din')">Dinheiro</div>
+                    <div class="pay-btn" id="p-wal" onclick="selecionarFormaPagamento('Carteira Digital', 'p-wal')">Digital Wallet</div>
+                </div>
+
+                <div style="background:#fffde7; border:1px solid #fff59d; padding:15px; border-radius:8px; margin-top:20px; font-size:13px;">
+                    <div style="margin-bottom:6px;"><strong>Total a Pagar:</strong> <span id="pay-total">R$ 0,00</span></div>
+                    <div style="margin-bottom:6px;"><strong>Forma Selecionada:</strong> <span id="pay-method">Nenhuma</span></div>
+                    <div><strong>Status do Pagamento:</strong> <span id="pay-status" style="color:var(--marrom-medio); font-weight:700;">Aguardando Envio</span></div>
+                </div>
+            </section>
+        </div>
+
+        <section id="contato" class="panel-box" style="text-align: center;">
+            <h2 class="section-title">Contato & Suporte</h2>
+            <p style="font-size:14px; max-width:600px; margin:0 auto 20px;">Dúvidas na utilização do terminal ou problemas com o envio de dados para o Raízes do Norte? Acione um de nossos atendentes supervisores presentes no salão físico.</p>
+            <div style="font-weight:700; color:var(--verde-principal); margin-bottom: 20px;">Central de Monitoramento Raízes do Norte - Manaus/AM</div>
+            
+            <div class="secao-downloads">
+                <div class="bloco-qrcode">
+                    <img src="imagens/QRcode.png" alt="QR Code para baixar o aplicativo" class="img-qrcode">
+                </div>
+                <div class="bloco-lojas">
+                    <img src="imagens/google_Play.png" alt="Google Play Store" class="img-googleplay">
+                    <img src="imagens/App Store.png" alt="App Store" class="img-AppStore">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>&copy; Copyright © 2026 RAÍZES DO NORTE PIZZARIA REGIONAL LTDA. - <br>CNPJ: 12.458.963/0001-27 - AVENIDA DJALMA BATISTA, Nº 2450 - BAIRRO CHAPADA, MANAUS - AM. <br>Todos os direitos reservados.</p>
+        <p class="disclaimer">Os preços apresentados já incluem impostos. Imagens meramente ilustrativas. Promoções, combos e preços podem variar de acordo com a sua localização. Se ocorrer qualquer divergência nos valores dos produtos ou promoções, o preço válido é o apresentado no carrinho de compras. As promoções são válidas enquanto durarem os estoques.</p>
+    </footer>
+
+    <!-- VÍNCULO COM O ARQUIVO JAVASCRIPT LOCAL -->
+    <script src="script.js"></script>
+</body>
+</html>
